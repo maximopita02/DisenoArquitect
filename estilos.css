@@ -483,9 +483,9 @@ margin-bottom: 10px;
     display: flex;
     column-gap: 0.5rem;
     position: absolute;
-    bottom: 8vh;
-    margin: 0 12% 30% 12%;
     z-index: 1;
+    left: 50%;
+    transform: translateX(-40%);
 }
 .slider-nav a{
     width: .5rem;
