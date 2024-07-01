@@ -4,15 +4,7 @@
     margin: 0;
     padding: 0;
 }
-header {
-    background-color: #112A46;
-    padding: 0 50px;
-    display: flex;
-    height: 100px;
-    align-items: center;
-    justify-content: space-between;
-    color:#fff;
-}
+
 .Menu a{
     text-transform: uppercase;
     padding: 0 10px;
@@ -45,6 +37,15 @@ body {
      min-height: 100vh;
       background-color: #FFE4C4;
     }
+    header {
+    background-color: #112A46;
+    padding: 0 50px;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    color:#fff;
+}
  footer {
         background-color: #112A46;
         text-align: center;
@@ -120,63 +121,73 @@ body {
     margin-right: 100px;
     margin-top: 30px;
 }
-.CarruselFotos img{
-    position: relative;
-    width: 345px; 
-    height: 240px;
-    gap: 20px;
-    border-radius: 10px;
+.Container{
+    display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
 }
-.CarruselFotos{
+.container-carousel {
     position: relative;
-    max-width: 1000px;
-    margin:  0 auto;
-    height: 240px;
-    width: 345px;
-    margin-top: 5vh;
+    width: 500px;
+    height: 300px;
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+    border-radius: 15px;
+    overflow: hidden;
+  
 }
-.CarruselSlide{
-    width: 50vh;
+
+.carruseles {
+    width: 1000%;
     height: 100%;
     display: flex;
-    aspect-ratio: 16/9;
-    overflow: hidden;
-    scroll-snap-align: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 .25rem .5rem #21212126;
-    border-radius: .5rem;
-    transform: translateX(-15%);
+
 }
-.CarruselSlide img{
-    flex: 1 0 100%;
-    scroll-snap-align: start;
+
+.slider-section {
+    width: calc(100% / 10);
+    height: 100%;
+}
+
+.slider-section img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-
+    border-radius: 15px;
 }
-.slider-nav{
+
+.btn-left,
+.btn-right {
     display: flex;
-    column-gap: 0.7rem;
     position: absolute;
-    bottom: 25vh;
-    left: 47%;
-    transform:  translateX(-40%);
-    z-index: 1;
-
-}
-.slider-nav a{
-    width: .5rem;
-    height: .5rem;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
     border-radius: 50%;
-    background-color: black;
-    opacity: .75;
-    transition: opacity ease 250ms;
-    margin-top: 15vh;
-
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
 }
-.slider-nav:hover{
-    opacity: 100%;
+
+.btn-left:hover,
+.btn-right:hover {
+    background-color: #333333d4;
+    color: #fff;
+}
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
 }
 /* Sobre Nosotros */
 .EstilosDiv{
@@ -295,6 +306,9 @@ body {
  }
 /* Responsive */
 @media (max-width: 1000px){
+    body{
+        flex-direction: column;
+    }
         .mostrar-menu,
         .esconder-menu{
             display: block;
@@ -452,52 +466,16 @@ margin-bottom: 10px;
     margin-right: 10%;
     margin-left: 10%;
 }
-.CarruselFotos{
-    position: relative;
-    max-width: 1000px;
-    margin: 5% 20% 5% 20% ;
-}
-.CarruselFotos img{
-    position: relative;
-    width: 50vh;
-    height: 100%;
-    gap: 20px;
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-}
-.CarruselSlide{
-    width: 40vh;
-    height: auto;
-    display: flex;
-    aspect-ratio: 16/9;
-    overflow: hidden;
-    scroll-snap-align: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 .25rem .5rem #21212126;
-    border-radius: .5rem;
-    bottom: 15vh;
-}
-.slider-nav{
-    width: 100%;
-    display: flex;
-    column-gap: 0.5rem;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    transform: translateX(-40%);
-}
-.slider-nav a{
-    width: .5rem;
-    height: .5rem;
-    border-radius: 50%;
-    background-color: black;
-    opacity: .75;
-    transition: opacity ease 250ms;
 
-}
-.slider-nav:hover{
-    opacity: 100%
+.container-carousel {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+    border-radius: 15px;
+    overflow: hidden;
+  
 }
 /* Sobre Nostros */
 .EstilosDiv{
